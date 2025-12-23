@@ -87,10 +87,10 @@ export default function HomePage() {
                         </div>
 
                         {/* Form Editor Tab */}
-                        <TabsContent value="form" className="flex-1 overflow-hidden m-0">
-                            <ScrollArea className="h-full p-4">
+                        <TabsContent value="form" className="flex-1 overflow-hidden m-0 min-h-0 relative">
+                            <div className="absolute inset-0 overflow-y-auto p-4 pb-24">
                                 <ResumeForm data={jsonData} updateData={setJsonData} />
-                            </ScrollArea>
+                            </div>
                         </TabsContent>
 
                         {/* JSON Editor Tab */}
