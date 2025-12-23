@@ -31,11 +31,11 @@ export function ResumePreview({ data }: ResumePreviewProps) {
     return (
         <div className="bg-white text-slate-800 w-full max-w-[210mm] min-h-[297mm] mx-auto shadow-2xl overflow-hidden font-montserrat flex flex-col">
             {/* Header Section */}
-            <div className="flex h-40">
+            <div className="flex h-40   m-4">
                 {/* Logo/Name Area */}
                 <div className="flex-1 bg-white relative flex flex-col justify-center pl-10 pr-4">
                     {/* Decorative Black Bar */}
-                    <div className="absolute top-0 left-0 w-8 h-24 bg-black"></div>
+                    <div className="absolute top-0 left-0 w-8 h-40 bg-black"></div>
 
                     <h1 className="text-4xl tracking-widest leading-none font-light uppercase text-black">
                         {name.split(' ')[0]} <br />
