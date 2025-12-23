@@ -135,7 +135,7 @@ export function ResumeForm({ data, updateData }: ResumeFormProps) {
                                 <Button
                                     variant="ghost"
                                     size="icon"
-                                    className="absolute top-2 right-2 text-red-500 hover:text-red-700"
+                                    className="absolute top-0 right-2 text-red-500 hover:text-red-700 hover:bg-red-50"
                                     onClick={() => removeItem("work", index)}
                                 >
                                     <Trash2 className="h-4 w-4" />
@@ -179,7 +179,7 @@ export function ResumeForm({ data, updateData }: ResumeFormProps) {
                                 <Button
                                     variant="ghost"
                                     size="icon"
-                                    className="absolute top-2 right-2 text-red-500 hover:text-red-700"
+                                    className="absolute top-0 right-2 text-red-500 hover:text-red-700 hover:bg-red-50"
                                     onClick={() => removeItem("education", index)}
                                 >
                                     <Trash2 className="h-4 w-4" />
