@@ -1,9 +1,8 @@
-import { useRef, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Paintbrush, LayoutTemplate, Star, CheckCircle2, Zap, Download, Github, Plus } from "lucide-react"
+import { Paintbrush, LayoutTemplate, Star, CheckCircle2, Zap, Download, Github, Plus, Heart } from "lucide-react"
 import { ResumePreview } from "../../components/resume-preview"
 
 const DEMO_RESUME = {
@@ -116,10 +115,7 @@ export default function HomePage() {
         <section className="relative py-20 md:py-32 overflow-hidden bg-slate-50 dark:bg-slate-950">
           <div className="container px-4 mx-auto relative z-10">
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-              <div className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-800 mb-6 shadow-sm">
-                <span className="flex h-2 w-2 rounded-full bg-indigo-500 mr-2"></span>
-                v2.0 Ahora con IA integrada
-              </div>
+
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-slate-900 dark:text-white">
                 Crea un currículum <span className="text-indigo-600">profesional</span> en minutos.
               </h1>
@@ -186,7 +182,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
 
               {/* Template 1: Marquez */}
               <TemplateCard
@@ -255,6 +251,54 @@ export default function HomePage() {
 
         </section>
 
+        {/* Support / Collaboration Section */}
+        <section className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+          <div className="container px-4 mx-auto">
+            <div className="max-w-4xl mx-auto bg-white dark:bg-slate-950 rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+              <div className="p-8 md:p-12 md:w-3/5 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 text-indigo-600 font-bold mb-4 uppercase tracking-wider text-xs">
+                  <Heart className="h-4 w-4 fill-current" />
+                  <span>Colabora con el proyecto</span>
+                </div>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                  ¿Te consiguió esa entrevista?
+                </h2>
+                <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                  Mantener esta herramienta gratuita y sin anuncios requiere esfuerzo. Si te ha sido de utilidad para conseguir tu próximo trabajo, considera apoyar el desarrollo o invitarme a un café.
+                </p>
+                <div className="flex items-center gap-4 text-sm text-slate-500">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">
+                        {String.fromCharCode(64 + i)}
+                      </div>
+                    ))}
+                  </div>
+                  <span>+150 personas ya han colaborado</span>
+                </div>
+              </div>
+
+              <div className="bg-indigo-600 p-8 md:p-12 md:w-2/5 flex flex-col items-center justify-center text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light"></div>
+
+                {/* QR Code Placeholder */}
+                <div className="relative z-10 bg-white p-4 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                  <div className="w-40 h-40 bg-slate-100 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center">
+                    <div className="text-center">
+                      <Zap className="h-8 w-8 text-slate-300 mx-auto mb-2" />
+                      <span className="text-xs text-slate-400 font-bold uppercase">Tu QR Aquí</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="relative z-10 text-indigo-100 text-sm mt-6 font-medium">
+                  Escanea para apoyar
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
@@ -309,16 +353,16 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode, titl
 
 function TemplateCard({ title, description, tags, color, templateId, link }: any) {
   return (
-    <Card className="group overflow-hidden border-2 border-transparent hover:border-indigo-500/20 transition-all duration-500 hover:shadow-2xl bg-white dark:bg-slate-900 h-full flex flex-col">
-      <div className="w-full aspect-[3/4] bg-slate-200/50 dark:bg-slate-800/50 relative overflow-hidden flex justify-center items-start p-0 transition-all duration-500">
+    <Card className="group overflow-hidden border-2 border-transparent hover:border-indigo-500/20 transition-all duration-500 hover:shadow-2xl bg-white dark:bg-slate-900 h-full flex flex-col shadow-none">
+      <div className="w-full bg-slate-100 dark:bg-slate-800 relative overflow-hidden flex justify-center items-center py-8 transition-all duration-500">
 
-        {/* Scaled Preview Container */}
-        <div className="relative w-[210mm] origin-top transform scale-[0.25] group-hover:scale-[0.26] transition-transform duration-700 ease-out h-auto bg-white shadow-xl pointer-events-none select-none">
-          <div className="h-[297mm] overflow-hidden bg-white">
-            <ResumePreview data={DEMO_RESUME} template={templateId} />
+        {/* Full A4 Preview - Complete Page Visible */}
+        <div className="w-full max-w-[280px] aspect-[210/297] relative bg-white overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="w-[210mm] h-[297mm] origin-top-left" style={{ transform: 'scale(0.335)' }}>
+              <ResumePreview data={DEMO_RESUME} template={templateId} />
+            </div>
           </div>
-          {/* Bottom Fade Overlay */}
-          <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
         </div>
 
         {/* Overlay Button */}
