@@ -1,87 +1,90 @@
 export const sampleResume = {
   basics: {
-    name: "CELIA MÁRQUEZ",
-    label: "DISEÑADORA GRÁFICA",
-    email: "hola@unsitiogenial.es",
-    phone: "(91) 1234-5678",
-    url: "unsitiogenial.es",
+    name: "MAX CERECEDA",
+    label: "INGENIERO DE SISTEMAS",
+    email: "maxcereceda@vexel-code.com",
+    phone: "+51 967 737 252",
+    url: "maxcereceda.com",
     summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Ingeniero de Sistemas con más de 5 años de experiencia desarrollando aplicaciones web modernas y escalables. Especializado en React, Node.js y arquitecturas cloud. Apasionado por código limpio y soluciones innovadoras.",
     location: {
-      city: "Calle Cualquiera 123",
-      region: "Cualquier Lugar",
+      city: "Lima",
+      region: "Perú",
     },
     profiles: [
       {
         network: "LinkedIn",
-        username: "celiamarquez",
-        url: "https://linkedin.com/in/celiamarquez",
+        username: "maxcereceda",
+        url: "https://linkedin.com/in/maxcereceda",
+      },
+      {
+        network: "GitHub",
+        username: "maxcerecedadev",
+        url: "https://github.com/maxcerecedadev",
       },
     ],
   },
   work: [
     {
-      name: "EMPRESA ENSIGNA",
-      position: "DISEÑADORA JUNIOR",
-      startDate: "2020",
+      name: "TECH SOLUTIONS SPA",
+      position: "SENIOR FULL STACK DEVELOPER",
+      startDate: "2021",
       endDate: "Presente",
-      summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      highlights: [
-        "Lorem ipsum dolor sit amet, consectetu.",
-        "Sed do eiusmod tempor incididunt ut sit.",
-        "Dolore magna aliqua. Ut enim ad minim.",
-      ],
-    },
-    {
-      name: "EMPRESA BORCELLE",
-      position: "DISEÑADORA GRÁFICA",
-      startDate: "2017",
-      endDate: "2020",
-      summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      highlights: [
-        "Lorem ipsum dolor sit amet, consectetu.",
-        "Sed do eiusmod tempor incididunt ut.",
-        "Dolore magna aliqua. Ut enim ad minim.",
-      ],
-    },
-    {
-      name: "EMPRESA SALFORD",
-      position: "ASISTENTE DE DISEÑO",
-      startDate: "2012",
-      endDate: "2017",
       summary:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor adipiscing elit, sed do eiusmod tempor.",
+        "Liderazgo técnico en proyectos web para clientes internacionales del sector FinTech.",
       highlights: [
-        "Lorem ipsum dolor sit amet, consectetu.",
-        "Sed do eiusmod tempor incididunt ut.",
-        "Dolore magna aliqua. Ut enim ad minim.",
+        "Desarrollo de arquitectura microservicios que mejoró el rendimiento un 40%.",
+        "Implementación de CI/CD reduciendo tiempos de deployment en un 60%.",
+        "Mentoría de desarrolladores junior y code reviews.",
+      ],
+    },
+    {
+      name: "DIGITAL WEB AGENCY",
+      position: "FRONTEND DEVELOPER",
+      startDate: "2018",
+      endDate: "2021",
+      summary: "Desarrollo de aplicaciones web y sitios responsivos para diversos sectores.",
+      highlights: [
+        "Creación de componentes reutilizables en React aumentando productividad 30%.",
+        "Optimización de rendimiento web logrando scores de 95+ en Lighthouse.",
+        "Colaboración con equipos de diseño y backend.",
+      ],
+    },
+    {
+      name: "STARTUP INNOVADORA",
+      position: "DESARROLLADOR WEB JUNIOR",
+      startDate: "2016",
+      endDate: "2018",
+      summary:
+        "Desarrollo de features para plataforma SaaS utilizada por más de 10,000 usuarios activos.",
+      highlights: [
+        "Implementación de nuevas funcionalidades usando JavaScript y Vue.js.",
+        "Resolución de bugs y mejora de UX basada en feedback de usuarios.",
+        "Participación activa en dailies y sprint plannings.",
       ],
     },
   ],
   education: [
     {
-      institution: "UNIVERSIDAD DE DISEÑO",
-      area: "Diseño Gráfico",
+      institution: "UNIVERSIDAD PRIVADA DEL NORTE",
+      area: "Ingeniería de Sistemas",
       studyType: "GRADO",
-      startDate: "2008",
-      endDate: "2012",
-    },
-    {
-      institution: "ESCUELA DE ARTE",
-      area: "Artes Plásticas",
-      studyType: "BACHILLERATO",
-      startDate: "2006",
-      endDate: "2008",
+      startDate: "2013",
+      endDate: "2018",
     },
   ],
   skills: [
     {
-      name: "DISEÑO WEB",
-      keywords: ["Photoshop", "Illustrator", "Figma", "Sketch"],
+      name: "FRONTEND",
+      keywords: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
     },
     {
-      name: "GESTIÓN",
-      keywords: ["Trello", "Asana", "Jira", "Slack"],
+      name: "BACKEND",
+      keywords: ["Node.js", "Express", "PostgreSQL", "MongoDB"],
+    },
+    {
+      name: "DEVOPS",
+      keywords: ["Docker", "AWS", "CI/CD", "Git"],
     },
   ],
   languages: [
@@ -91,7 +94,7 @@ export const sampleResume = {
     },
     {
       language: "Inglés",
-      fluency: "Intermedio",
+      fluency: "Avanzado",
     },
   ],
   projects: [],

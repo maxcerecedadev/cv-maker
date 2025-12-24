@@ -7,13 +7,13 @@ import { ResumePreview } from "../../components/resume-preview"
 
 const DEMO_RESUME = {
   basics: {
-    name: "Sofía Herrera",
-    label: "Digital Product Designer",
+    name: "Max Cereceda",
+    label: "Ingeniero de Sistemas",
     image: "",
-    email: "sofia.herrera@email.com",
-    phone: "+34 600 123 456",
-    url: "www.sofia-design.com",
-    summary: "Diseñadora de producto con más de 5 años de experiencia creando experiencias digitales centradas en el usuario. Especializada en sistemas de diseño, accesibilidad y maquetación web. Apasionada por resolver problemas complejos a través de soluciones visuales simples y elegantes.",
+    email: "maxcereceda@vexel-code.com",
+    phone: "+51 967 737 252",
+    url: "maxcereceda.com",
+    summary: "Ingeniero de Sistemas con más de 5 años de experiencia creando aplicaciones web modernas y escalables. Especializado en React, Node.js y arquitecturas cloud. Apasionado por código limpio y soluciones innovadoras.",
     location: {
       address: "Calle Gran Vía 12",
       postalCode: "28013",
@@ -22,53 +22,53 @@ const DEMO_RESUME = {
       region: "Madrid",
     },
     profiles: [
-      { network: "LinkedIn", username: "sofiaherrera", url: "https://linkedin.com/in/sofia" },
-      { network: "Behance", username: "sofiadesign", url: "https://behance.net/sofia" }
+      { network: "LinkedIn", username: "maxcereceda", url: "https://linkedin.com/in/max" },
+      { network: "GitHub", username: "maxcerecedadev", url: "https://github.com/maxcerecedadev" }
     ]
   },
   work: [
     {
-      name: "Studio Creativo Tech",
-      position: "Senior Product Designer",
-      url: "https://studio.com",
+      name: "Tech Solutions SpA",
+      position: "Senior Full Stack Developer",
+      url: "https://techsolutions.com",
       startDate: "2021-03",
       endDate: "Presente",
-      summary: "Liderazgo del equipo de diseño para clientes internacionales del sector Fintech.",
+      summary: "Liderazgo técnico en proyectos web para clientes internacionales del sector FinTech.",
       highlights: [
-        "Implementación de un Design System que redujo tiempos de desarrollo en un 30%.",
-        "Rediseño completo de la aplicación móvil aumentando la retención un 15%.",
-        "Mentoria de diseñadores junior y gestión de carga de trabajo."
+        "Desarrollo de arquitectura microservicios que mejoró el rendimiento un 40%.",
+        "Implementación de CI/CD reduciendo tiempos de deployment en un 60%.",
+        "Mentoría de desarrolladores junior y code reviews."
       ]
     },
     {
-      name: "Agencia Digital Neo",
-      position: "UI/UX Designer",
-      url: "https://neo.agency",
+      name: "Digital Web Agency",
+      position: "Frontend Developer",
+      url: "https://digitalweb.agency",
       startDate: "2018-06",
       endDate: "2021-02",
-      summary: "Diseño de interfaces web y aplicaciones móviles para diversos sectores.",
+      summary: "Desarrollo de aplicaciones web y sitios responsivos para diversos sectores.",
       highlights: [
-        "Desarrollo de prototipos interactivos en Figma para pruebas de usuario.",
-        "Colaboración estrecha con desarrolladores front-end para asegurar la calidad visual."
+        "Creación de componentes reutilizables en React aumentando productividad 30%.",
+        "Optimización de rendimiento web logrando scores de 95+ en Lighthouse."
       ]
     }
   ],
   education: [
     {
-      institution: "Universidad Politécnica",
-      url: "https://upm.es",
-      area: "Grado en Diseño Multimedia",
+      institution: "Universidad Privada del Norte",
+      url: "https://upn.edu.pe",
+      area: "Ingeniería de Sistemas",
       studyType: "Bachelor",
-      startDate: "2014-09",
+      startDate: "2013-09",
       endDate: "2018-06",
       score: "Notable",
-      courses: ["Diseño Centrado en Usuario", "Accesibilidad Web", "Animación Digital"]
+      courses: ["Desarrollo Web", "Bases de Datos", "Arquitectura de Software"]
     }
   ],
   skills: [
-    { name: "Diseño UI", level: "Avanzado", keywords: ["Figma", "Sketch", "Adobe XD"] },
-    { name: "Prototipado", level: "Avanzado", keywords: ["Principle", "Protopie"] },
-    { name: "Frontend", level: "Intermedio", keywords: ["HTML/CSS", "React Basic", "Tailwind"] },
+    { name: "Frontend", level: "Avanzado", keywords: ["React", "TypeScript", "Tailwind CSS"] },
+    { name: "Backend", level: "Avanzado", keywords: ["Node.js", "Express", "PostgreSQL"] },
+    { name: "DevOps", level: "Intermedio", keywords: ["Docker", "AWS", "CI/CD"] },
   ],
   languages: [
     { language: "Español", fluency: "Nativo" },
@@ -77,9 +77,9 @@ const DEMO_RESUME = {
   ],
   projects: [
     {
-      name: "E-commerce Redesign",
-      description: "Rediseño completo de la experiencia de compra para una marca de moda sostenible.",
-      keywords: ["UX Research", "UI Design"],
+      name: "Plataforma E-commerce",
+      description: "Desarrollo full-stack de plataforma de comercio electrónico con pasarela de pagos integrada.",
+      keywords: ["React", "Node.js", "PostgreSQL"],
       url: "https://project.com"
     }
   ]
@@ -92,10 +92,14 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="bg-slate-900 text-white p-1.5 rounded-lg">
-              <LayoutTemplate className="h-5 w-5" />
-            </div>
-            <span className="font-bold text-xl tracking-tight">CV Maker</span>
+            <a href="/">
+              <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                CV Maker
+              </h1>
+            </a>
+            <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground font-medium">
+              Beta
+            </span>
           </div>
           <nav className="hidden md:flex gap-8 text-sm font-medium">
             <a href="#features" className="hover:text-primary transition-colors">Características</a>
@@ -320,12 +324,11 @@ export default function HomePage() {
       <footer className="border-t py-12 bg-slate-50 dark:bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-2">
-              <div className="bg-slate-900 text-white p-1.5 rounded-lg">
-                <LayoutTemplate className="h-4 w-4" />
-              </div>
-              <span className="font-bold text-lg tracking-tight">CV Maker</span>
-            </div>
+            <a href="/">
+              <h2 className="text-lg font-bold tracking-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                CV Maker
+              </h2>
+            </a>
             <p className="text-sm text-slate-500">
               © {new Date().getFullYear()} CV Maker. Desarrollado por <a href="#" className="font-medium hover:text-indigo-600 transition-colors">MaxCerecedaDev</a>.
             </p>
