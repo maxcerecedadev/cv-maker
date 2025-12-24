@@ -195,7 +195,7 @@ export default function HomePage() {
                                     </CardDescription>
                                 </CardHeader>
                                 <CardFooter>
-                                    <Link to="/editor" className="w-full">
+                                    <Link to="/editor?template=marquez" className="w-full">
                                         <Button className="w-full">Usar esta plantilla</Button>
                                     </Link>
                                 </CardFooter>
@@ -309,7 +309,7 @@ export default function HomePage() {
                                     </CardDescription>
                                 </CardHeader>
                                 <CardFooter>
-                                    <Link to="/editor" className="w-full">
+                                    <Link to="/editor?template=salinas" className="w-full">
                                         <Button className="w-full">Usar esta plantilla</Button>
                                     </Link>
                                 </CardFooter>
@@ -386,7 +386,7 @@ export default function HomePage() {
                                     </CardDescription>
                                 </CardHeader>
                                 <CardFooter>
-                                    <Link to="/editor" className="w-full">
+                                    <Link to="/editor?template=gutierrez" className="w-full">
                                         <Button className="w-full">Usar esta plantilla</Button>
                                     </Link>
                                 </CardFooter>
@@ -495,7 +495,97 @@ export default function HomePage() {
                                     </CardDescription>
                                 </CardHeader>
                                 <CardFooter>
-                                    <Link to="/editor" className="w-full">
+                                    <Link to="/editor?template=palmerston" className="w-full">
+                                        <Button className="w-full">Usar esta plantilla</Button>
+                                    </Link>
+                                </CardFooter>
+                            </Card>
+
+                            {/* Template 5: Soto (New Request) */}
+                            <Card className="group overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl bg-card">
+                                <div className="aspect-[3/4] bg-slate-100 relative overflow-hidden flex justify-center items-start pt-6 group-hover:bg-slate-200/50 transition-colors">
+                                    {/* Mockup */}
+                                    <div className="w-[180px] h-[260px] bg-white shadow-xl flex flex-col p-4 text-[4px] transform group-hover:scale-110 transition-transform duration-500 origin-top overflow-hidden font-sans border border-slate-200">
+                                        {/* Header */}
+                                        <div className="flex justify-between items-start border-b border-slate-300 pb-2 mb-2">
+                                            <div>
+                                                <div className="font-bold text-[8px] text-[#0f172a] mb-0.5">RICARDO SOTO</div>
+                                                <div className="text-[4px] text-slate-500">EJECUTIVO DE VENTAS</div>
+                                            </div>
+                                            <div className="flex flex-col items-end gap-0.5 opacity-70">
+                                                <div className="w-12 h-0.5 bg-slate-300"></div>
+                                                <div className="w-8 h-0.5 bg-slate-300"></div>
+                                                <div className="w-10 h-0.5 bg-slate-300"></div>
+                                            </div>
+                                        </div>
+
+                                        {/* About */}
+                                        <div className="mb-2">
+                                            <div className="bg-[#0f172a] text-white inline-block px-1.5 py-0.5 mb-1 text-[3px] font-bold uppercase">Acerca de mi</div>
+                                            <div className="text-[3px] text-slate-500 text-justify leading-tight">
+                                                Ejecutivo de ventas con más de 5 años de experiencia. Especializado en negociación B2B.
+                                            </div>
+                                        </div>
+
+                                        {/* Experience */}
+                                        <div className="flex-1 mb-2">
+                                            <div className="bg-[#0f172a] text-white inline-block px-1.5 py-0.5 mb-1.5 text-[3px] font-bold uppercase">Experiencia Laboral</div>
+                                            <div className="space-y-1.5">
+                                                <div>
+                                                    <div className="flex justify-between font-bold text-[3.5px] text-[#0f172a]">
+                                                        <span>Ejecutivo B2B</span>
+                                                        <span>2024 - Pres.</span>
+                                                    </div>
+                                                    <div className="text-[3px] text-justify leading-tight text-slate-500 mt-0.5">
+                                                        Desarrollé estrategias de ventas consultivas, logrando incremento del 30%.
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="flex justify-between font-bold text-[3.5px] text-[#0f172a]">
+                                                        <span>Asesor de Ventas</span>
+                                                        <span>2023 - 2024</span>
+                                                    </div>
+                                                    <div className="text-[3px] text-justify leading-tight text-slate-500 mt-0.5">
+                                                        Atendí y asesoré a más de 200 clientes.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Education & Skills */}
+                                        <div className="mb-1">
+                                            <div className="bg-[#0f172a] text-white inline-block px-1.5 py-0.5 mb-1 text-[3px] font-bold uppercase">Habilidades</div>
+                                            <div className="grid grid-cols-2 gap-1">
+                                                <div className="bg-slate-50 p-1">
+                                                    <div className="w-full h-0.5 bg-slate-300 mb-0.5"></div>
+                                                    <div className="w-3/4 h-0.5 bg-slate-300"></div>
+                                                </div>
+                                                <div className="bg-slate-50 p-1">
+                                                    <div className="w-full h-0.5 bg-slate-300 mb-0.5"></div>
+                                                    <div className="w-1/2 h-0.5 bg-slate-300"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <CardHeader>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <Badge variant="secondary" className="bg-indigo-100 text-indigo-700 hover:bg-indigo-100">Most Popular</Badge>
+                                        <div className="flex text-amber-500">
+                                            <Star className="h-3 w-3 fill-current" />
+                                            <Star className="h-3 w-3 fill-current" />
+                                            <Star className="h-3 w-3 fill-current" />
+                                            <Star className="h-3 w-3 fill-current" />
+                                            <Star className="h-3 w-3 fill-current" />
+                                        </div>
+                                    </div>
+                                    <CardTitle>Soto Professional</CardTitle>
+                                    <CardDescription>
+                                        Diseño con encabezados resaltados en azul oscuro. Estructura clara y profesional.
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardFooter>
+                                    <Link to="/editor?template=soto" className="w-full">
                                         <Button className="w-full">Usar esta plantilla</Button>
                                     </Link>
                                 </CardFooter>
