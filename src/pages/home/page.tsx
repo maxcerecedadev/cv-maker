@@ -353,28 +353,18 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode, titl
 
 function TemplateCard({ title, description, tags, color, templateId, link }: any) {
   return (
-    <Card className="group overflow-hidden border-2 border-transparent hover:border-indigo-500/20 transition-all duration-500 hover:shadow-2xl bg-white dark:bg-slate-900 h-full flex flex-col shadow-none">
-      <div className="w-full bg-slate-100 dark:bg-slate-800 relative overflow-hidden flex justify-center items-center py-8 transition-all duration-500">
-
-        {/* Full A4 Preview - Complete Page Visible */}
-        <div className="w-full max-w-[280px] aspect-[210/297] relative bg-white overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="w-[210mm] h-[297mm] origin-top-left" style={{ transform: 'scale(0.335)' }}>
-              <ResumePreview data={DEMO_RESUME} template={templateId} />
-            </div>
+    <Card className="overflow-hidden border shadow-none bg-white dark:bg-slate-900 h-full flex flex-col relative">
+      {/* Preview Area */}
+      <div className="w-full bg-slate-100 dark:bg-slate-800 flex justify-center items-center p-8">
+        {/* Wrapper that matches the scaled size */}
+        <div className="bg-white overflow-hidden" style={{ width: 'calc(210mm * 0.335)', height: 'calc(297mm * 0.335)' }}>
+          <div style={{ width: '210mm', height: '297mm', transform: 'scale(0.335)', transformOrigin: 'top left' }}>
+            <ResumePreview data={DEMO_RESUME} template={templateId} />
           </div>
-        </div>
-
-        {/* Overlay Button */}
-        <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[1px] z-20">
-          <Link to={link}>
-            <Button className="rounded-full px-6 gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl">
-              Usar Plantilla <Paintbrush className="h-3 w-3" />
-            </Button>
-          </Link>
         </div>
       </div>
 
+      {/* Card Info */}
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between mb-3">
           <div className="flex gap-2">
@@ -397,6 +387,15 @@ function TemplateCard({ title, description, tags, color, templateId, link }: any
           {description}
         </CardDescription>
       </CardContent>
+
+      {/* Hover Button */}
+      <div className="absolute inset-0 bg-slate-900/0 hover:bg-slate-900/40 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
+        <Link to={link}>
+          <Button className="rounded-full px-6 gap-2">
+            Usar Plantilla <Paintbrush className="h-3 w-3" />
+          </Button>
+        </Link>
+      </div>
     </Card>
   )
 }
